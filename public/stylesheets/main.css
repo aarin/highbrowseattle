@@ -1,0 +1,380 @@
+body, 
+html {
+    width: 100%;
+    font-family: "Lato", "Helvetica Neue";
+}
+
+/******************************************************************************/
+/*******                  title and subtitle styling                    *******/
+/******************************************************************************/
+
+h1{
+    font-size: 72px;
+}
+
+hr {
+    width: 50%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    text-transform: lowercase;
+}
+
+.highlight {
+    font-size: 1.3em;
+    text-transform: lowercase;
+    letter-spacing: -0.05em;
+    color: gray;
+    margin-top: -10px;
+}
+
+.desc {
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.top-padding {
+    padding-top: 1em;
+}
+
+.bottom-padding {
+    padding-bottom: 2em;
+}
+
+
+/******************************************************************************/
+/*******                      media query for mobile                    *******/
+/******************************************************************************/
+@media screen and (max-width: 640px) {
+	h1 {
+	    font-size: 50px;
+	}
+	h3 {
+	    font-size: 20px;
+	}
+	.container
+	 {
+	    margin-bottom: 30px;
+	}
+	.artist {
+	    margin-bottom: 80px;
+	}
+
+	.desc {
+	    max-width: 100%;
+	}
+	.faq {
+	    max-width: 100% !important;
+	}
+	.intro .intro-row>div,
+	.info .info-row>div{
+	    /* add margin below stacked divs */
+	    margin-bottom: 20px;
+	}
+    .headshot {
+        max-width: 55%;
+        margin: 0 auto;
+    }
+    #portfolio-action > .parallax {
+        padding-bottom: 3em;
+    }
+    .featured a {
+        padding-bottom: 1em;
+    }
+    
+    /* add padding to top of pages' landings */
+    #services-landing,
+    #portfolio-landing,
+    #faq-landing,
+    #contact-landing {
+        padding-top: 30px;
+    }
+	
+}
+
+/******************************************************************************/
+/*******    PARALLAX EFFECTS:                                           *******/
+/*******                                                                *******/
+/*******       landing            portfolio-action                      *******/
+/*******       services-landing                                         *******/
+/*******       portfolio-landing                                        *******/
+/*******       faq-landing                                         *******/
+/*******       contact-landing                                         *******/
+/*******       book-landing                                        *******/
+/******************************************************************************/
+.parallax { 
+    background-image: url("https://hd.unsplash.com/photo-1466781783364-36c955e42a7f");
+    height: inherit; 
+    /* parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 50px;
+}
+#landing {
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+#landing .subtitle {
+    margin-top: 3em;
+}
+
+#landing .content {
+    padding: 15% 0;
+}
+#portfolio-action {
+    margin-bottom: 100px;
+}
+
+/* update background-images for parallax content */
+#portfolio-action > .parallax {
+    background-image: url("https://hd.unsplash.com/photo-1454944338482-a69bb95894af");
+}
+#services-landing > .parallax {
+    background-image: url("https://hd.unsplash.com/photo-1471509117934-096ee308cbf2");
+}
+#portfolio-landing > .parallax {
+    background-image: url("https://hd.unsplash.com/photo-1452696024259-cb7474e79947");
+}
+#faq-landing > .parallax {
+    background-image: url("https://hd.unsplash.com/photo-1446292532430-3e76f6ab6444");
+}
+#contact-landing > .parallax {
+    background-image: url("https://hd.unsplash.com/photo-1471248026681-35a45d5530a3");
+}
+#book-landing > .parallax {
+    background-image: url("https://hd.unsplash.com/photo-1471459005646-477b21b092a3");
+}
+
+/* adjust padding for content */
+#services-landing .content,
+#portfolio-landing .content,
+#faq-landing .content,
+#contact-landing .content,
+#book-landing .content{
+    color: white;
+    padding: 140px 0;
+}
+
+/* text shadow on parallax content */
+.content {
+    padding: 5% 0;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+/******************************************************************************/
+/******************************************************************************/
+/*******                       ICONS                                    *******/
+/******************************************************************************/
+/******************************************************************************/
+/*******    home:                                                       *******/
+/*******                                                                *******/
+/*******        intro                                                   *******/
+/*******        featured   (with link)                                  *******/
+/*******        connect   (with link)                                  *******/
+/*******                                                                *******/
+/******************************************************************************/
+/*******    services:                                                *******/
+/*******                                                               *******/
+/*******        info                                                    *******/
+/******************************************************************************/
+
+/* 'intro' and 'info' icons */
+.intro .intro-row i,
+.info .info-row i{
+    float: left;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    /* pale green color */
+    background-color: #aeb49e;
+    color: #fff;
+    border-radius: 70px;
+    line-height: 70px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+/* 'featured' with links */
+.featured {
+    margin-top: 50px;
+}
+
+.featured a, 
+.featured a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.featured a i {
+    width: 100%;
+    height: 262px;
+    line-height: 250px;
+    margin-bottom: 20px;
+    color: #fff;
+    background: rgb(229,229,229);
+    font-size: 8em;
+}
+
+.featured a:hover i{
+    background: rgba(242,225,104,0.5);
+}
+
+/* 'connect' with links */
+.connect a,
+.connect a:hover {
+    color: #aeb49e;
+    text-decoration: none;
+}
+
+.connect a i {
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    /*background-color: rgba(242,225,104,.8);*/
+    background-color: #aeb49e;
+    border-radius: 90px;
+    line-height: 90px;
+    margin-bottom: 10px;
+}
+
+
+.connect a:hover i{
+    background: rgba(174,180,158, 0.5);
+}
+
+/******************************************************************************/
+/*******                     other 'home' styling                       *******/
+/******************************************************************************/
+
+.headshot {
+    opacity: 0.82;
+}
+
+/******************************************************************************/
+/*******                     footer styling                       *******/
+/******************************************************************************/
+
+
+.footer {
+    background: #4C5152;
+    color: #959b9d;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer .container {
+    margin-bottom:0;
+}
+
+
+/******************************************************************************/
+/*******       testimonial 'home' styling                       *******/
+/******************************************************************************/
+
+.testimonial > .thumbnail,
+.prices > .thumbnail {
+    margin: 5px;
+    min-height: 300px;
+    /*background: rgba(68,67,73,0.2);*/
+    background: rgb(229,229,229);
+    margin-bottom: 10px;
+}
+
+.testimonial .quote,
+.prices .descr {
+    padding: 20px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.testimonial .signature {
+    padding-right: 20px;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+/******************************************************************************/
+/*******       prices 'services' styling                       *******/
+/******************************************************************************/
+
+.prices .prices-title {
+    padding-top: 1em;
+    color: gray;
+}
+
+.prices .value {
+    padding-right: 20px;
+    text-align: right;
+    font-size: 2em;
+}
+
+/******************************************************************************/
+/*******       gallery 'portfolio' styling                       *******/
+/******************************************************************************/
+
+.gallery .thumbnail {
+    padding: 0;
+    margin: 5px;
+}
+
+.gallery {
+    /* wonky way to align thumbnails for different heights */
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.gallery .thumb {
+    padding: 30px 0;
+}
+
+.portfolio-intro {
+    margin-bottom: 0;
+}
+
+
+/******************************************************************************/
+/*******       'faq' styling                       *******/
+/******************************************************************************/
+.faq {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.faq .question {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #aeb49e;
+}
+
+.faq .answer {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: gray;
+}
